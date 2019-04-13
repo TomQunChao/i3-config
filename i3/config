@@ -27,7 +27,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Tab exec --no-startup-id rofi -show window
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 bindsym $mod+d exec --no-startup-id rofi -show drun
- 
+
 # file manager
 bindsym $mod+Shift+f exec termite -g ranger
 
@@ -60,7 +60,7 @@ bindsym XF86AudioPrev exec mpc prev --port 6601
 bindsym XF86AudioPlay exec mpc toggle --port 6601
 bindsym XF86AudioPause exec mpc toggle --port 6601
 bindsym XF86AudioStop exec mpc stop --port 6601
- 
+
 # focus_follows_mouse no
 
 # change focus
@@ -122,8 +122,8 @@ bindsym $mod+F9 scratchpad show
 #navigate workspaces next / previous
 bindsym $mod+Ctrl+Right workspace next
 bindsym $mod+Ctrl+Left workspace prev
- 
- 
+
+
 #Set workspaces
 set $ws1  "1:  "
 set $ws2  "2:  "
@@ -135,7 +135,7 @@ set $ws7  "7:  "
 set $ws8  "8:  "
 set $ws9  "9:  "
 set $ws10 "0:  "
- 
+
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -165,7 +165,7 @@ bindsym $mod+Shift+5 move container to workspace $ws5; workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
- 
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -222,7 +222,7 @@ set $gray       #d0d0d0
 set $primary    #F58E8E
 set $secondary  #79D4D5
 set $tertiary   #7AABD4
- 
+
 set $additional #26CE8D
 set $warning    #E7176A
 
@@ -231,7 +231,7 @@ set $warning    #E7176A
 client.focused          $primary    $primary   $foreground $primary
 client.focused_inactive $secondary  $secondary $foreground $secondary
 client.unfocused        $tertiary   $tertiary  $background $tertiary
-client.urgent           $gray       $gray      $foreground $gray  
+client.urgent           $gray       $gray      $foreground $gray
 
 # bar
 # {
@@ -239,7 +239,7 @@ client.urgent           $gray       $gray      $foreground $gray
 # 	position top
 # 	status_command i3blocks
 # 	separator_symbol "»"
-# 	font pango: SauceCodePro Nerd Font Black 8	
+# 	font pango: SauceCodePro Nerd Font Black 8
 # 	colors
 # 	{
 # 	    # <border name>     <border>        <background>        <text>
@@ -254,7 +254,7 @@ client.urgent           $gray       $gray      $foreground $gray
 
 # Start Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
- 
+
 # Start i3bar to display a workspace bar (plus the system information i3status)
 
 #############################
@@ -271,7 +271,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # Smart gaps (gaps used if only more than one container on the workspace)
 #smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 #smart_borders on
 
@@ -316,9 +316,9 @@ mode "$mode_gaps_outer" {
 for_window [class="telegram-desktop"] floating enable
 
 # Wallpaper
-# exec_always --no-startup-id feh --bg-scale ~/Pictures/1.jpg 
-exec_always --no-startup-id killall back4.sh 
-exec_always --no-startup-id $HOME/back4.sh 0.03 Downloads/beautycity.gif
+exec_always --no-startup-id feh --bg-scale ~/Pictures/1.jpg
+# exec_always --no-startup-id killall back4.sh
+# exec_always --no-startup-id $HOME/back4.sh 0.03 Downloads/beautycity.gif
 
 exec --no-startup-id compton -f
 
